@@ -1,0 +1,4 @@
+services:
+  ollama:
+    volumes:
+      - ${EXTERNAL_DATA_ROOT}/ollama:/root/.ollama

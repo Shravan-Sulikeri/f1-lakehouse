@@ -5542,3 +5542,1196 @@ where season is null
 [0m01:37:07.001359 [debug] [MainThread]: Command `dbt build` succeeded at 01:37:07.001309 after 2.41 seconds
 [0m01:37:07.001595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83e0fbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff88ab8690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e521c50>]}
 [0m01:37:07.001801 [debug] [MainThread]: Flushing usage events
+[0m03:30:48.237146 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb96220d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb9981650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb9607a50>]}
+
+
+============================== 03:30:48.244525 | d54f24d5-4b18-44c8-86b1-20b3f1328650 ==============================
+[0m03:30:48.244525 [info ] [MainThread]: Running with dbt=1.8.7
+[0m03:30:48.245153 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/opt/transform/logs', 'profiles_dir': '/opt/transform/profiles', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt deps', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m03:30:48.316437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd54f24d5-4b18-44c8-86b1-20b3f1328650', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb9981010>]}
+[0m03:30:48.327116 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m03:30:48.333202 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m03:30:48.335617 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.1420403, "process_user_time": 1.446686, "process_kernel_time": 0.285866, "process_mem_max_rss": "96524", "process_in_blocks": "8504", "process_out_blocks": "1659"}
+[0m03:30:48.338679 [debug] [MainThread]: Command `dbt deps` succeeded at 03:30:48.338506 after 0.15 seconds
+[0m03:30:48.339126 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb963e390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb95eca50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb95dbbd0>]}
+[0m03:30:48.339429 [debug] [MainThread]: Flushing usage events
+[0m03:30:49.408058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb24484d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb25ff0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb2448550>]}
+
+
+============================== 03:30:49.409756 | 98f9c883-aef3-4f55-8aae-3da11d08872f ==============================
+[0m03:30:49.409756 [info ] [MainThread]: Running with dbt=1.8.7
+[0m03:30:49.410161 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/opt/transform/profiles', 'log_path': '/opt/transform/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt build', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m03:30:49.584549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '98f9c883-aef3-4f55-8aae-3da11d08872f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb24bedd0>]}
+[0m03:30:49.616233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '98f9c883-aef3-4f55-8aae-3da11d08872f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb4952050>]}
+[0m03:30:49.616968 [info ] [MainThread]: Registered adapter: duckdb=1.8.2
+[0m03:30:49.662586 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m03:30:49.747031 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m03:30:49.747373 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m03:30:49.769055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '98f9c883-aef3-4f55-8aae-3da11d08872f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb24ad210>]}
+[0m03:30:49.862892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '98f9c883-aef3-4f55-8aae-3da11d08872f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb24ac9d0>]}
+[0m03:30:49.863522 [info ] [MainThread]: Found 5 models, 17 data tests, 422 macros
+[0m03:30:49.870537 [info ] [MainThread]: 
+[0m03:30:49.871765 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m03:30:49.876078 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_f1'
+[0m03:30:49.876666 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_f1'
+[0m03:30:49.922536 [debug] [ThreadPool]: Using duckdb connection "list_f1"
+[0m03:30:49.922861 [debug] [ThreadPool]: Using duckdb connection "list_f1"
+[0m03:30:49.923145 [debug] [ThreadPool]: On list_f1: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "connection_name": "list_f1"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"f1"'
+    
+  
+  
+[0m03:30:49.923434 [debug] [ThreadPool]: On list_f1: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "connection_name": "list_f1"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"f1"'
+    
+  
+  
+[0m03:30:49.923696 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:30:49.923929 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:30:49.981512 [debug] [ThreadPool]: SQL status: OK in 0.058 seconds
+[0m03:30:49.981872 [debug] [ThreadPool]: SQL status: OK in 0.058 seconds
+[0m03:30:49.983162 [debug] [ThreadPool]: On list_f1: Close
+[0m03:30:49.984003 [debug] [ThreadPool]: On list_f1: Close
+[0m03:30:49.987775 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_f1, now create_f1_main_gold)
+[0m03:30:49.988009 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_f1, now create_f1_main_silver)
+[0m03:30:49.988350 [debug] [ThreadPool]: Creating schema "database: "f1"
+schema: "main_gold"
+"
+[0m03:30:49.992476 [debug] [ThreadPool]: Creating schema "database: "f1"
+schema: "main_silver"
+"
+[0m03:30:50.003964 [debug] [ThreadPool]: Using duckdb connection "create_f1_main_gold"
+[0m03:30:50.007013 [debug] [ThreadPool]: On create_f1_main_gold: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "connection_name": "create_f1_main_gold"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='f1'
+        and type='sqlite'
+    
+  
+[0m03:30:50.007319 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:30:50.006287 [debug] [ThreadPool]: Using duckdb connection "create_f1_main_silver"
+[0m03:30:50.008600 [debug] [ThreadPool]: On create_f1_main_silver: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "connection_name": "create_f1_main_silver"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='f1'
+        and type='sqlite'
+    
+  
+[0m03:30:50.011499 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:30:50.017218 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m03:30:50.017498 [debug] [ThreadPool]: SQL status: OK in 0.006 seconds
+[0m03:30:50.018483 [debug] [ThreadPool]: Using duckdb connection "create_f1_main_gold"
+[0m03:30:50.019818 [debug] [ThreadPool]: On create_f1_main_gold: BEGIN
+[0m03:30:50.019473 [debug] [ThreadPool]: Using duckdb connection "create_f1_main_silver"
+[0m03:30:50.020850 [debug] [ThreadPool]: On create_f1_main_silver: BEGIN
+[0m03:30:50.020627 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m03:30:50.024118 [debug] [ThreadPool]: Using duckdb connection "create_f1_main_gold"
+[0m03:30:50.024385 [debug] [ThreadPool]: On create_f1_main_gold: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "connection_name": "create_f1_main_gold"} */
+
+    
+    
+        create schema if not exists "f1"."main_gold"
+    
+[0m03:30:50.021952 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m03:30:50.025409 [debug] [ThreadPool]: Using duckdb connection "create_f1_main_silver"
+[0m03:30:50.025780 [debug] [ThreadPool]: On create_f1_main_silver: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "connection_name": "create_f1_main_silver"} */
+
+    
+    
+        create schema if not exists "f1"."main_silver"
+    
+[0m03:30:50.025170 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m03:30:50.026990 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m03:30:50.028907 [debug] [ThreadPool]: On create_f1_main_silver: COMMIT
+[0m03:30:50.029148 [debug] [ThreadPool]: Using duckdb connection "create_f1_main_silver"
+[0m03:30:50.028340 [debug] [ThreadPool]: On create_f1_main_gold: COMMIT
+[0m03:30:50.029658 [debug] [ThreadPool]: Using duckdb connection "create_f1_main_gold"
+[0m03:30:50.029925 [debug] [ThreadPool]: On create_f1_main_gold: COMMIT
+[0m03:30:50.029395 [debug] [ThreadPool]: On create_f1_main_silver: COMMIT
+[0m03:30:50.030967 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m03:30:50.031233 [debug] [ThreadPool]: On create_f1_main_silver: Close
+[0m03:30:50.030598 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m03:30:50.031852 [debug] [ThreadPool]: On create_f1_main_gold: Close
+[0m03:30:50.035883 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_f1_main_gold, now list_f1_main_gold)
+[0m03:30:50.036517 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_f1_main_silver, now list_f1_main_silver)
+[0m03:30:50.040095 [debug] [ThreadPool]: Using duckdb connection "list_f1_main_gold"
+[0m03:30:50.042152 [debug] [ThreadPool]: On list_f1_main_gold: BEGIN
+[0m03:30:50.042359 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:30:50.041825 [debug] [ThreadPool]: Using duckdb connection "list_f1_main_silver"
+[0m03:30:50.043198 [debug] [ThreadPool]: On list_f1_main_silver: BEGIN
+[0m03:30:50.045656 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:30:50.050580 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m03:30:50.051416 [debug] [ThreadPool]: Using duckdb connection "list_f1_main_silver"
+[0m03:30:50.051814 [debug] [ThreadPool]: On list_f1_main_silver: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "connection_name": "list_f1_main_silver"} */
+select
+      'f1' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_silver'
+    and table_catalog = 'f1'
+  
+[0m03:30:50.051078 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m03:30:50.060405 [debug] [ThreadPool]: Using duckdb connection "list_f1_main_gold"
+[0m03:30:50.062406 [debug] [ThreadPool]: On list_f1_main_gold: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "connection_name": "list_f1_main_gold"} */
+select
+      'f1' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_gold'
+    and table_catalog = 'f1'
+  
+[0m03:30:50.070710 [debug] [ThreadPool]: SQL status: OK in 0.019 seconds
+[0m03:30:50.072031 [debug] [ThreadPool]: On list_f1_main_silver: ROLLBACK
+[0m03:30:50.072761 [debug] [ThreadPool]: Failed to rollback 'list_f1_main_silver'
+[0m03:30:50.072968 [debug] [ThreadPool]: On list_f1_main_silver: Close
+[0m03:30:50.071130 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m03:30:50.074189 [debug] [ThreadPool]: On list_f1_main_gold: ROLLBACK
+[0m03:30:50.074500 [debug] [ThreadPool]: Failed to rollback 'list_f1_main_gold'
+[0m03:30:50.074690 [debug] [ThreadPool]: On list_f1_main_gold: Close
+[0m03:30:50.076312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '98f9c883-aef3-4f55-8aae-3da11d08872f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac1ac150>]}
+[0m03:30:50.076707 [debug] [MainThread]: Using duckdb connection "master"
+[0m03:30:50.076904 [debug] [MainThread]: On master: BEGIN
+[0m03:30:50.077067 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:30:50.084296 [debug] [MainThread]: SQL status: OK in 0.007 seconds
+[0m03:30:50.084679 [debug] [MainThread]: On master: COMMIT
+[0m03:30:50.084890 [debug] [MainThread]: Using duckdb connection "master"
+[0m03:30:50.085092 [debug] [MainThread]: On master: COMMIT
+[0m03:30:50.085410 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m03:30:50.085601 [debug] [MainThread]: On master: Close
+[0m03:30:50.086590 [info ] [MainThread]: Concurrency: 8 threads (target='local')
+[0m03:30:50.086885 [info ] [MainThread]: 
+[0m03:30:50.093395 [debug] [Thread-1 (]: Began running node model.f1_transform.laps
+[0m03:30:50.093628 [debug] [Thread-2 (]: Began running node model.f1_transform.results
+[0m03:30:50.093830 [debug] [Thread-3 (]: Began running node model.f1_transform.weather
+[0m03:30:50.094192 [info ] [Thread-1 (]: 1 of 22 START sql table model main_silver.laps ................................. [RUN]
+[0m03:30:50.094623 [info ] [Thread-2 (]: 2 of 22 START sql table model main_silver.results .............................. [RUN]
+[0m03:30:50.094957 [info ] [Thread-3 (]: 3 of 22 START sql table model main_silver.weather .............................. [RUN]
+[0m03:30:50.095327 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.f1_transform.laps'
+[0m03:30:50.095649 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.f1_transform.results'
+[0m03:30:50.095949 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.f1_transform.weather'
+[0m03:30:50.096161 [debug] [Thread-1 (]: Began compiling node model.f1_transform.laps
+[0m03:30:50.096425 [debug] [Thread-2 (]: Began compiling node model.f1_transform.results
+[0m03:30:50.096664 [debug] [Thread-3 (]: Began compiling node model.f1_transform.weather
+[0m03:30:50.100503 [debug] [Thread-1 (]: Writing injected SQL for node "model.f1_transform.laps"
+[0m03:30:50.101619 [debug] [Thread-2 (]: Writing injected SQL for node "model.f1_transform.results"
+[0m03:30:50.103519 [debug] [Thread-3 (]: Writing injected SQL for node "model.f1_transform.weather"
+[0m03:30:50.108908 [debug] [Thread-1 (]: Began executing node model.f1_transform.laps
+[0m03:30:50.109140 [debug] [Thread-2 (]: Began executing node model.f1_transform.results
+[0m03:30:50.109365 [debug] [Thread-3 (]: Began executing node model.f1_transform.weather
+[0m03:30:50.127094 [debug] [Thread-1 (]: Writing runtime sql for node "model.f1_transform.laps"
+[0m03:30:50.128785 [debug] [Thread-2 (]: Writing runtime sql for node "model.f1_transform.results"
+[0m03:30:50.130423 [debug] [Thread-3 (]: Writing runtime sql for node "model.f1_transform.weather"
+[0m03:30:50.132149 [debug] [Thread-1 (]: Using duckdb connection "model.f1_transform.laps"
+[0m03:30:50.132470 [debug] [Thread-3 (]: Using duckdb connection "model.f1_transform.weather"
+[0m03:30:50.132672 [debug] [Thread-1 (]: On model.f1_transform.laps: BEGIN
+[0m03:30:50.132826 [debug] [Thread-2 (]: Using duckdb connection "model.f1_transform.results"
+[0m03:30:50.133061 [debug] [Thread-3 (]: On model.f1_transform.weather: BEGIN
+[0m03:30:50.133762 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m03:30:50.133552 [debug] [Thread-2 (]: On model.f1_transform.results: BEGIN
+[0m03:30:50.133303 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m03:30:50.134332 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m03:30:50.141053 [debug] [Thread-2 (]: SQL status: OK in 0.007 seconds
+[0m03:30:50.141700 [debug] [Thread-2 (]: Using duckdb connection "model.f1_transform.results"
+[0m03:30:50.141560 [debug] [Thread-3 (]: SQL status: OK in 0.008 seconds
+[0m03:30:50.142218 [debug] [Thread-3 (]: Using duckdb connection "model.f1_transform.weather"
+[0m03:30:50.141943 [debug] [Thread-2 (]: On model.f1_transform.results: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.results"} */
+
+  
+    
+    
+
+    create  table
+      "f1"."main_silver"."results__dbt_tmp"
+  
+    as (
+      with src as (
+  select * from read_parquet('/opt/data/bronze/results/**/*.parquet', hive_partitioning=1)
+)
+select
+  try_cast(season as integer) as season,
+  try_cast(round  as integer) as round,
+  cast(grand_prix as varchar) as grand_prix,
+  cast(session    as varchar) as session_code,
+  * exclude (season, round, grand_prix, session)
+from src
+    );
+  
+  
+[0m03:30:50.141326 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m03:30:50.142478 [debug] [Thread-3 (]: On model.f1_transform.weather: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.weather"} */
+
+  
+    
+    
+
+    create  table
+      "f1"."main_silver"."weather__dbt_tmp"
+  
+    as (
+      with src as (
+  select * from read_parquet('/opt/data/bronze/weather/**/*.parquet', hive_partitioning=1)
+)
+select
+  try_cast(season as integer) as season,
+  try_cast(round  as integer) as round,
+  cast(grand_prix as varchar) as grand_prix,
+  cast(session    as varchar) as session_code,
+  * exclude (season, round, grand_prix, session)
+from src
+    );
+  
+  
+[0m03:30:50.143176 [debug] [Thread-1 (]: Using duckdb connection "model.f1_transform.laps"
+[0m03:30:50.145878 [debug] [Thread-1 (]: On model.f1_transform.laps: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.laps"} */
+
+  
+    
+    
+
+    create  table
+      "f1"."main_silver"."laps__dbt_tmp"
+  
+    as (
+      with src as (
+  select * from read_parquet('/opt/data/bronze/laps/**/*.parquet', hive_partitioning=1)
+)
+select
+  try_cast(season as integer) as season,
+  try_cast(round  as integer) as round,
+  cast(grand_prix as varchar) as grand_prix,
+  cast(session    as varchar) as session_code,
+  * exclude (season, round, grand_prix, session)
+from src
+    );
+  
+  
+[0m03:30:50.583400 [debug] [Thread-3 (]: SQL status: OK in 0.439 seconds
+[0m03:30:50.589548 [debug] [Thread-3 (]: Using duckdb connection "model.f1_transform.weather"
+[0m03:30:50.591948 [debug] [Thread-3 (]: On model.f1_transform.weather: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.weather"} */
+alter table "f1"."main_silver"."weather" rename to "weather__dbt_backup"
+[0m03:30:50.594918 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m03:30:50.598551 [debug] [Thread-3 (]: Using duckdb connection "model.f1_transform.weather"
+[0m03:30:50.602892 [debug] [Thread-3 (]: On model.f1_transform.weather: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.weather"} */
+alter table "f1"."main_silver"."weather__dbt_tmp" rename to "weather"
+[0m03:30:50.606870 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m03:30:50.623449 [debug] [Thread-3 (]: On model.f1_transform.weather: COMMIT
+[0m03:30:50.630381 [debug] [Thread-3 (]: Using duckdb connection "model.f1_transform.weather"
+[0m03:30:50.633209 [debug] [Thread-3 (]: On model.f1_transform.weather: COMMIT
+[0m03:30:50.699766 [debug] [Thread-3 (]: SQL status: OK in 0.065 seconds
+[0m03:30:50.710123 [debug] [Thread-3 (]: Using duckdb connection "model.f1_transform.weather"
+[0m03:30:50.711678 [debug] [Thread-3 (]: On model.f1_transform.weather: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.weather"} */
+drop table if exists "f1"."main_silver"."weather__dbt_backup" cascade
+[0m03:30:50.720212 [debug] [Thread-3 (]: SQL status: OK in 0.004 seconds
+[0m03:30:50.725593 [debug] [Thread-3 (]: On model.f1_transform.weather: Close
+[0m03:30:50.730273 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '98f9c883-aef3-4f55-8aae-3da11d08872f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa9917010>]}
+[0m03:30:50.732547 [info ] [Thread-3 (]: 3 of 22 OK created sql table model main_silver.weather ......................... [[32mOK[0m in 0.63s]
+[0m03:30:50.734681 [debug] [Thread-3 (]: Finished running node model.f1_transform.weather
+[0m03:30:50.741818 [debug] [Thread-5 (]: Began running node test.f1_transform.not_null_weather_round.80e2ff036f
+[0m03:30:50.746575 [info ] [Thread-5 (]: 4 of 22 START test not_null_weather_round ...................................... [RUN]
+[0m03:30:50.742476 [debug] [Thread-7 (]: Began running node test.f1_transform.not_null_weather_session_code.2cbdf7ee2a
+[0m03:30:50.742235 [debug] [Thread-6 (]: Began running node test.f1_transform.not_null_weather_season.773def5ec8
+[0m03:30:50.749302 [debug] [Thread-5 (]: Acquiring new duckdb connection 'test.f1_transform.not_null_weather_round.80e2ff036f'
+[0m03:30:50.754295 [info ] [Thread-7 (]: 6 of 22 START test not_null_weather_session_code ............................... [RUN]
+[0m03:30:50.755799 [info ] [Thread-6 (]: 5 of 22 START test not_null_weather_season ..................................... [RUN]
+[0m03:30:50.760928 [debug] [Thread-5 (]: Began compiling node test.f1_transform.not_null_weather_round.80e2ff036f
+[0m03:30:50.762799 [debug] [Thread-7 (]: Acquiring new duckdb connection 'test.f1_transform.not_null_weather_session_code.2cbdf7ee2a'
+[0m03:30:50.766742 [debug] [Thread-6 (]: Acquiring new duckdb connection 'test.f1_transform.not_null_weather_season.773def5ec8'
+[0m03:30:50.784577 [debug] [Thread-5 (]: Writing injected SQL for node "test.f1_transform.not_null_weather_round.80e2ff036f"
+[0m03:30:50.787324 [debug] [Thread-7 (]: Began compiling node test.f1_transform.not_null_weather_session_code.2cbdf7ee2a
+[0m03:30:50.791454 [debug] [Thread-6 (]: Began compiling node test.f1_transform.not_null_weather_season.773def5ec8
+[0m03:30:50.806977 [debug] [Thread-7 (]: Writing injected SQL for node "test.f1_transform.not_null_weather_session_code.2cbdf7ee2a"
+[0m03:30:50.820064 [debug] [Thread-5 (]: Began executing node test.f1_transform.not_null_weather_round.80e2ff036f
+[0m03:30:50.815219 [debug] [Thread-6 (]: Writing injected SQL for node "test.f1_transform.not_null_weather_season.773def5ec8"
+[0m03:30:50.839539 [debug] [Thread-5 (]: Writing runtime sql for node "test.f1_transform.not_null_weather_round.80e2ff036f"
+[0m03:30:50.840436 [debug] [Thread-7 (]: Began executing node test.f1_transform.not_null_weather_session_code.2cbdf7ee2a
+[0m03:30:50.854916 [debug] [Thread-7 (]: Writing runtime sql for node "test.f1_transform.not_null_weather_session_code.2cbdf7ee2a"
+[0m03:30:50.861967 [debug] [Thread-6 (]: Began executing node test.f1_transform.not_null_weather_season.773def5ec8
+[0m03:30:50.872683 [debug] [Thread-6 (]: Writing runtime sql for node "test.f1_transform.not_null_weather_season.773def5ec8"
+[0m03:30:50.873279 [debug] [Thread-5 (]: Using duckdb connection "test.f1_transform.not_null_weather_round.80e2ff036f"
+[0m03:30:50.881791 [debug] [Thread-7 (]: Using duckdb connection "test.f1_transform.not_null_weather_session_code.2cbdf7ee2a"
+[0m03:30:50.882121 [debug] [Thread-5 (]: On test.f1_transform.not_null_weather_round.80e2ff036f: BEGIN
+[0m03:30:50.884648 [debug] [Thread-7 (]: On test.f1_transform.not_null_weather_session_code.2cbdf7ee2a: BEGIN
+[0m03:30:50.895760 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m03:30:50.892337 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m03:30:50.890463 [debug] [Thread-6 (]: Using duckdb connection "test.f1_transform.not_null_weather_season.773def5ec8"
+[0m03:30:50.901221 [debug] [Thread-7 (]: SQL status: OK in 0.006 seconds
+[0m03:30:50.912689 [debug] [Thread-7 (]: Using duckdb connection "test.f1_transform.not_null_weather_session_code.2cbdf7ee2a"
+[0m03:30:50.908366 [debug] [Thread-6 (]: On test.f1_transform.not_null_weather_season.773def5ec8: BEGIN
+[0m03:30:50.905647 [debug] [Thread-5 (]: SQL status: OK in 0.012 seconds
+[0m03:30:50.917739 [debug] [Thread-7 (]: On test.f1_transform.not_null_weather_session_code.2cbdf7ee2a: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_weather_session_code.2cbdf7ee2a"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select session_code
+from "f1"."main_silver"."weather"
+where session_code is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:50.919230 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m03:30:50.923554 [debug] [Thread-5 (]: Using duckdb connection "test.f1_transform.not_null_weather_round.80e2ff036f"
+[0m03:30:50.927538 [debug] [Thread-7 (]: SQL status: OK in 0.001 seconds
+[0m03:30:50.930947 [debug] [Thread-6 (]: SQL status: OK in 0.012 seconds
+[0m03:30:50.933120 [debug] [Thread-5 (]: On test.f1_transform.not_null_weather_round.80e2ff036f: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_weather_round.80e2ff036f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select round
+from "f1"."main_silver"."weather"
+where round is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:50.937898 [debug] [Thread-7 (]: On test.f1_transform.not_null_weather_session_code.2cbdf7ee2a: ROLLBACK
+[0m03:30:50.938547 [debug] [Thread-6 (]: Using duckdb connection "test.f1_transform.not_null_weather_season.773def5ec8"
+[0m03:30:50.943029 [debug] [Thread-5 (]: SQL status: OK in 0.001 seconds
+[0m03:30:50.944638 [debug] [Thread-7 (]: Failed to rollback 'test.f1_transform.not_null_weather_session_code.2cbdf7ee2a'
+[0m03:30:50.948348 [debug] [Thread-6 (]: On test.f1_transform.not_null_weather_season.773def5ec8: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_weather_season.773def5ec8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select season
+from "f1"."main_silver"."weather"
+where season is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:50.950605 [debug] [Thread-5 (]: On test.f1_transform.not_null_weather_round.80e2ff036f: ROLLBACK
+[0m03:30:50.952130 [debug] [Thread-7 (]: On test.f1_transform.not_null_weather_session_code.2cbdf7ee2a: Close
+[0m03:30:50.957008 [debug] [Thread-6 (]: SQL status: OK in 0.001 seconds
+[0m03:30:50.961052 [debug] [Thread-5 (]: Failed to rollback 'test.f1_transform.not_null_weather_round.80e2ff036f'
+[0m03:30:50.971861 [info ] [Thread-7 (]: 6 of 22 PASS not_null_weather_session_code ..................................... [[32mPASS[0m in 0.21s]
+[0m03:30:50.973822 [debug] [Thread-6 (]: On test.f1_transform.not_null_weather_season.773def5ec8: ROLLBACK
+[0m03:30:50.975901 [debug] [Thread-5 (]: On test.f1_transform.not_null_weather_round.80e2ff036f: Close
+[0m03:30:50.981945 [debug] [Thread-7 (]: Finished running node test.f1_transform.not_null_weather_session_code.2cbdf7ee2a
+[0m03:30:51.001398 [debug] [Thread-2 (]: SQL status: OK in 0.858 seconds
+[0m03:30:51.002298 [debug] [Thread-6 (]: Failed to rollback 'test.f1_transform.not_null_weather_season.773def5ec8'
+[0m03:30:51.007478 [info ] [Thread-5 (]: 4 of 22 PASS not_null_weather_round ............................................ [[32mPASS[0m in 0.26s]
+[0m03:30:51.016360 [debug] [Thread-2 (]: Using duckdb connection "model.f1_transform.results"
+[0m03:30:51.017573 [debug] [Thread-6 (]: On test.f1_transform.not_null_weather_season.773def5ec8: Close
+[0m03:30:51.022349 [debug] [Thread-5 (]: Finished running node test.f1_transform.not_null_weather_round.80e2ff036f
+[0m03:30:51.024738 [debug] [Thread-2 (]: On model.f1_transform.results: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.results"} */
+alter table "f1"."main_silver"."results" rename to "results__dbt_backup"
+[0m03:30:51.025889 [info ] [Thread-6 (]: 5 of 22 PASS not_null_weather_season ........................................... [[32mPASS[0m in 0.26s]
+[0m03:30:51.033447 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m03:30:51.034969 [debug] [Thread-6 (]: Finished running node test.f1_transform.not_null_weather_season.773def5ec8
+[0m03:30:51.040836 [debug] [Thread-2 (]: Using duckdb connection "model.f1_transform.results"
+[0m03:30:51.045872 [debug] [Thread-2 (]: On model.f1_transform.results: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.results"} */
+alter table "f1"."main_silver"."results__dbt_tmp" rename to "results"
+[0m03:30:51.047992 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m03:30:51.055340 [debug] [Thread-2 (]: On model.f1_transform.results: COMMIT
+[0m03:30:51.057980 [debug] [Thread-2 (]: Using duckdb connection "model.f1_transform.results"
+[0m03:30:51.059863 [debug] [Thread-2 (]: On model.f1_transform.results: COMMIT
+[0m03:30:51.100041 [debug] [Thread-2 (]: SQL status: OK in 0.039 seconds
+[0m03:30:51.103551 [debug] [Thread-2 (]: Using duckdb connection "model.f1_transform.results"
+[0m03:30:51.105959 [debug] [Thread-2 (]: On model.f1_transform.results: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.results"} */
+drop table if exists "f1"."main_silver"."results__dbt_backup" cascade
+[0m03:30:51.109821 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m03:30:51.112235 [debug] [Thread-2 (]: On model.f1_transform.results: Close
+[0m03:30:51.119458 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '98f9c883-aef3-4f55-8aae-3da11d08872f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaac01190>]}
+[0m03:30:51.120308 [info ] [Thread-2 (]: 2 of 22 OK created sql table model main_silver.results ......................... [[32mOK[0m in 1.02s]
+[0m03:30:51.121059 [debug] [Thread-2 (]: Finished running node model.f1_transform.results
+[0m03:30:51.122111 [debug] [Thread-4 (]: Began running node test.f1_transform.not_null_results_round.69e7ee2263
+[0m03:30:51.122659 [debug] [Thread-3 (]: Began running node test.f1_transform.not_null_results_season.4571c4d0da
+[0m03:30:51.123175 [debug] [Thread-8 (]: Began running node test.f1_transform.not_null_results_session_code.564091e2b6
+[0m03:30:51.123433 [info ] [Thread-4 (]: 7 of 22 START test not_null_results_round ...................................... [RUN]
+[0m03:30:51.124168 [info ] [Thread-3 (]: 8 of 22 START test not_null_results_season ..................................... [RUN]
+[0m03:30:51.124779 [info ] [Thread-8 (]: 9 of 22 START test not_null_results_session_code ............................... [RUN]
+[0m03:30:51.125427 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.f1_transform.not_null_results_round.69e7ee2263'
+[0m03:30:51.127118 [debug] [Thread-4 (]: Began compiling node test.f1_transform.not_null_results_round.69e7ee2263
+[0m03:30:51.126604 [debug] [Thread-8 (]: Acquiring new duckdb connection 'test.f1_transform.not_null_results_session_code.564091e2b6'
+[0m03:30:51.126008 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.f1_transform.weather, now test.f1_transform.not_null_results_season.4571c4d0da)
+[0m03:30:51.130678 [debug] [Thread-3 (]: Began compiling node test.f1_transform.not_null_results_season.4571c4d0da
+[0m03:30:51.130345 [debug] [Thread-8 (]: Began compiling node test.f1_transform.not_null_results_session_code.564091e2b6
+[0m03:30:51.129872 [debug] [Thread-4 (]: Writing injected SQL for node "test.f1_transform.not_null_results_round.69e7ee2263"
+[0m03:30:51.132801 [debug] [Thread-3 (]: Writing injected SQL for node "test.f1_transform.not_null_results_season.4571c4d0da"
+[0m03:30:51.135367 [debug] [Thread-8 (]: Writing injected SQL for node "test.f1_transform.not_null_results_session_code.564091e2b6"
+[0m03:30:51.137100 [debug] [Thread-4 (]: Began executing node test.f1_transform.not_null_results_round.69e7ee2263
+[0m03:30:51.137364 [debug] [Thread-3 (]: Began executing node test.f1_transform.not_null_results_season.4571c4d0da
+[0m03:30:51.141476 [debug] [Thread-3 (]: Writing runtime sql for node "test.f1_transform.not_null_results_season.4571c4d0da"
+[0m03:30:51.138837 [debug] [Thread-4 (]: Writing runtime sql for node "test.f1_transform.not_null_results_round.69e7ee2263"
+[0m03:30:51.141698 [debug] [Thread-8 (]: Began executing node test.f1_transform.not_null_results_session_code.564091e2b6
+[0m03:30:51.225845 [debug] [Thread-8 (]: Writing runtime sql for node "test.f1_transform.not_null_results_session_code.564091e2b6"
+[0m03:30:51.226164 [debug] [Thread-3 (]: Using duckdb connection "test.f1_transform.not_null_results_season.4571c4d0da"
+[0m03:30:51.226343 [debug] [Thread-4 (]: Using duckdb connection "test.f1_transform.not_null_results_round.69e7ee2263"
+[0m03:30:51.227004 [debug] [Thread-3 (]: On test.f1_transform.not_null_results_season.4571c4d0da: BEGIN
+[0m03:30:51.228015 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m03:30:51.227729 [debug] [Thread-4 (]: On test.f1_transform.not_null_results_round.69e7ee2263: BEGIN
+[0m03:30:51.229078 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m03:30:51.228926 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m03:30:51.229893 [debug] [Thread-3 (]: Using duckdb connection "test.f1_transform.not_null_results_season.4571c4d0da"
+[0m03:30:51.229624 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m03:30:51.230486 [debug] [Thread-4 (]: Using duckdb connection "test.f1_transform.not_null_results_round.69e7ee2263"
+[0m03:30:51.230139 [debug] [Thread-3 (]: On test.f1_transform.not_null_results_season.4571c4d0da: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_results_season.4571c4d0da"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select season
+from "f1"."main_silver"."results"
+where season is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:51.227522 [debug] [Thread-8 (]: Using duckdb connection "test.f1_transform.not_null_results_session_code.564091e2b6"
+[0m03:30:51.230726 [debug] [Thread-4 (]: On test.f1_transform.not_null_results_round.69e7ee2263: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_results_round.69e7ee2263"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select round
+from "f1"."main_silver"."results"
+where round is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:51.231869 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m03:30:51.233810 [debug] [Thread-3 (]: On test.f1_transform.not_null_results_season.4571c4d0da: ROLLBACK
+[0m03:30:51.232957 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m03:30:51.235080 [debug] [Thread-4 (]: On test.f1_transform.not_null_results_round.69e7ee2263: ROLLBACK
+[0m03:30:51.234227 [debug] [Thread-3 (]: Failed to rollback 'test.f1_transform.not_null_results_season.4571c4d0da'
+[0m03:30:51.235958 [debug] [Thread-3 (]: On test.f1_transform.not_null_results_season.4571c4d0da: Close
+[0m03:30:51.235590 [debug] [Thread-4 (]: Failed to rollback 'test.f1_transform.not_null_results_round.69e7ee2263'
+[0m03:30:51.232097 [debug] [Thread-8 (]: On test.f1_transform.not_null_results_session_code.564091e2b6: BEGIN
+[0m03:30:51.237240 [info ] [Thread-3 (]: 8 of 22 PASS not_null_results_season ........................................... [[32mPASS[0m in 0.11s]
+[0m03:30:51.237981 [debug] [Thread-4 (]: On test.f1_transform.not_null_results_round.69e7ee2263: Close
+[0m03:30:51.238490 [debug] [Thread-8 (]: Opening a new connection, currently in state init
+[0m03:30:51.239154 [debug] [Thread-3 (]: Finished running node test.f1_transform.not_null_results_season.4571c4d0da
+[0m03:30:51.239638 [info ] [Thread-4 (]: 7 of 22 PASS not_null_results_round ............................................ [[32mPASS[0m in 0.11s]
+[0m03:30:51.240923 [debug] [Thread-4 (]: Finished running node test.f1_transform.not_null_results_round.69e7ee2263
+[0m03:30:51.240400 [debug] [Thread-8 (]: SQL status: OK in 0.002 seconds
+[0m03:30:51.241372 [debug] [Thread-8 (]: Using duckdb connection "test.f1_transform.not_null_results_session_code.564091e2b6"
+[0m03:30:51.241709 [debug] [Thread-8 (]: On test.f1_transform.not_null_results_session_code.564091e2b6: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_results_session_code.564091e2b6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select session_code
+from "f1"."main_silver"."results"
+where session_code is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:51.242664 [debug] [Thread-8 (]: SQL status: OK in 0.001 seconds
+[0m03:30:51.243722 [debug] [Thread-8 (]: On test.f1_transform.not_null_results_session_code.564091e2b6: ROLLBACK
+[0m03:30:51.244451 [debug] [Thread-8 (]: Failed to rollback 'test.f1_transform.not_null_results_session_code.564091e2b6'
+[0m03:30:51.245736 [debug] [Thread-8 (]: On test.f1_transform.not_null_results_session_code.564091e2b6: Close
+[0m03:30:51.246726 [info ] [Thread-8 (]: 9 of 22 PASS not_null_results_session_code ..................................... [[32mPASS[0m in 0.12s]
+[0m03:30:51.247780 [debug] [Thread-8 (]: Finished running node test.f1_transform.not_null_results_session_code.564091e2b6
+[0m03:30:51.282570 [debug] [Thread-1 (]: SQL status: OK in 1.134 seconds
+[0m03:30:51.286476 [debug] [Thread-1 (]: Using duckdb connection "model.f1_transform.laps"
+[0m03:30:51.286976 [debug] [Thread-1 (]: On model.f1_transform.laps: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.laps"} */
+alter table "f1"."main_silver"."laps" rename to "laps__dbt_backup"
+[0m03:30:51.287921 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m03:30:51.290036 [debug] [Thread-1 (]: Using duckdb connection "model.f1_transform.laps"
+[0m03:30:51.290512 [debug] [Thread-1 (]: On model.f1_transform.laps: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.laps"} */
+alter table "f1"."main_silver"."laps__dbt_tmp" rename to "laps"
+[0m03:30:51.291415 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m03:30:51.292535 [debug] [Thread-1 (]: On model.f1_transform.laps: COMMIT
+[0m03:30:51.292918 [debug] [Thread-1 (]: Using duckdb connection "model.f1_transform.laps"
+[0m03:30:51.293341 [debug] [Thread-1 (]: On model.f1_transform.laps: COMMIT
+[0m03:30:51.694322 [debug] [Thread-1 (]: SQL status: OK in 0.400 seconds
+[0m03:30:51.696771 [debug] [Thread-1 (]: Using duckdb connection "model.f1_transform.laps"
+[0m03:30:51.697119 [debug] [Thread-1 (]: On model.f1_transform.laps: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.laps"} */
+drop table if exists "f1"."main_silver"."laps__dbt_backup" cascade
+[0m03:30:51.698448 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m03:30:51.699569 [debug] [Thread-1 (]: On model.f1_transform.laps: Close
+[0m03:30:51.946545 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '98f9c883-aef3-4f55-8aae-3da11d08872f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf378450>]}
+[0m03:30:51.949374 [info ] [Thread-1 (]: 1 of 22 OK created sql table model main_silver.laps ............................ [[32mOK[0m in 1.85s]
+[0m03:30:51.950147 [debug] [Thread-1 (]: Finished running node model.f1_transform.laps
+[0m03:30:51.951411 [debug] [Thread-5 (]: Began running node test.f1_transform.not_null_laps_round.c55865a754
+[0m03:30:51.951651 [debug] [Thread-6 (]: Began running node test.f1_transform.not_null_laps_season.6c89aefec5
+[0m03:30:51.951939 [debug] [Thread-2 (]: Began running node test.f1_transform.not_null_laps_session_code.ccd0209ff1
+[0m03:30:51.952375 [info ] [Thread-5 (]: 10 of 22 START test not_null_laps_round ........................................ [RUN]
+[0m03:30:51.952910 [info ] [Thread-6 (]: 11 of 22 START test not_null_laps_season ....................................... [RUN]
+[0m03:30:51.953540 [info ] [Thread-2 (]: 12 of 22 START test not_null_laps_session_code ................................. [RUN]
+[0m03:30:51.954250 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.f1_transform.not_null_weather_round.80e2ff036f, now test.f1_transform.not_null_laps_round.c55865a754)
+[0m03:30:51.954660 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.f1_transform.not_null_weather_season.773def5ec8, now test.f1_transform.not_null_laps_season.6c89aefec5)
+[0m03:30:51.955038 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.f1_transform.results, now test.f1_transform.not_null_laps_session_code.ccd0209ff1)
+[0m03:30:51.955448 [debug] [Thread-5 (]: Began compiling node test.f1_transform.not_null_laps_round.c55865a754
+[0m03:30:51.955738 [debug] [Thread-6 (]: Began compiling node test.f1_transform.not_null_laps_season.6c89aefec5
+[0m03:30:51.956044 [debug] [Thread-2 (]: Began compiling node test.f1_transform.not_null_laps_session_code.ccd0209ff1
+[0m03:30:51.959739 [debug] [Thread-5 (]: Writing injected SQL for node "test.f1_transform.not_null_laps_round.c55865a754"
+[0m03:30:51.962605 [debug] [Thread-6 (]: Writing injected SQL for node "test.f1_transform.not_null_laps_season.6c89aefec5"
+[0m03:30:51.965585 [debug] [Thread-2 (]: Writing injected SQL for node "test.f1_transform.not_null_laps_session_code.ccd0209ff1"
+[0m03:30:51.967762 [debug] [Thread-5 (]: Began executing node test.f1_transform.not_null_laps_round.c55865a754
+[0m03:30:51.969442 [debug] [Thread-5 (]: Writing runtime sql for node "test.f1_transform.not_null_laps_round.c55865a754"
+[0m03:30:51.969662 [debug] [Thread-6 (]: Began executing node test.f1_transform.not_null_laps_season.6c89aefec5
+[0m03:30:51.974018 [debug] [Thread-6 (]: Writing runtime sql for node "test.f1_transform.not_null_laps_season.6c89aefec5"
+[0m03:30:51.975264 [debug] [Thread-2 (]: Began executing node test.f1_transform.not_null_laps_session_code.ccd0209ff1
+[0m03:30:51.976747 [debug] [Thread-2 (]: Writing runtime sql for node "test.f1_transform.not_null_laps_session_code.ccd0209ff1"
+[0m03:30:51.977584 [debug] [Thread-5 (]: Using duckdb connection "test.f1_transform.not_null_laps_round.c55865a754"
+[0m03:30:51.979901 [debug] [Thread-5 (]: On test.f1_transform.not_null_laps_round.c55865a754: BEGIN
+[0m03:30:51.979634 [debug] [Thread-6 (]: Using duckdb connection "test.f1_transform.not_null_laps_season.6c89aefec5"
+[0m03:30:51.980313 [debug] [Thread-2 (]: Using duckdb connection "test.f1_transform.not_null_laps_session_code.ccd0209ff1"
+[0m03:30:51.980896 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m03:30:51.981155 [debug] [Thread-6 (]: On test.f1_transform.not_null_laps_season.6c89aefec5: BEGIN
+[0m03:30:51.981541 [debug] [Thread-2 (]: On test.f1_transform.not_null_laps_session_code.ccd0209ff1: BEGIN
+[0m03:30:51.982981 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m03:30:51.982361 [debug] [Thread-6 (]: Opening a new connection, currently in state closed
+[0m03:30:51.994496 [debug] [Thread-2 (]: SQL status: OK in 0.011 seconds
+[0m03:30:51.995380 [debug] [Thread-6 (]: SQL status: OK in 0.012 seconds
+[0m03:30:51.996927 [debug] [Thread-6 (]: Using duckdb connection "test.f1_transform.not_null_laps_season.6c89aefec5"
+[0m03:30:51.996589 [debug] [Thread-2 (]: Using duckdb connection "test.f1_transform.not_null_laps_session_code.ccd0209ff1"
+[0m03:30:51.996379 [debug] [Thread-5 (]: SQL status: OK in 0.015 seconds
+[0m03:30:52.001041 [debug] [Thread-5 (]: Using duckdb connection "test.f1_transform.not_null_laps_round.c55865a754"
+[0m03:30:52.000759 [debug] [Thread-2 (]: On test.f1_transform.not_null_laps_session_code.ccd0209ff1: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_laps_session_code.ccd0209ff1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select session_code
+from "f1"."main_silver"."laps"
+where session_code is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:52.000424 [debug] [Thread-6 (]: On test.f1_transform.not_null_laps_season.6c89aefec5: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_laps_season.6c89aefec5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select season
+from "f1"."main_silver"."laps"
+where season is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:52.003486 [debug] [Thread-5 (]: On test.f1_transform.not_null_laps_round.c55865a754: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_laps_round.c55865a754"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select round
+from "f1"."main_silver"."laps"
+where round is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:52.004574 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m03:30:52.006894 [debug] [Thread-2 (]: On test.f1_transform.not_null_laps_session_code.ccd0209ff1: ROLLBACK
+[0m03:30:52.007598 [debug] [Thread-2 (]: Failed to rollback 'test.f1_transform.not_null_laps_session_code.ccd0209ff1'
+[0m03:30:52.007887 [debug] [Thread-2 (]: On test.f1_transform.not_null_laps_session_code.ccd0209ff1: Close
+[0m03:30:52.005574 [debug] [Thread-6 (]: SQL status: OK in 0.002 seconds
+[0m03:30:52.010150 [debug] [Thread-6 (]: On test.f1_transform.not_null_laps_season.6c89aefec5: ROLLBACK
+[0m03:30:52.008468 [info ] [Thread-2 (]: 12 of 22 PASS not_null_laps_session_code ....................................... [[32mPASS[0m in 0.05s]
+[0m03:30:52.013841 [debug] [Thread-2 (]: Finished running node test.f1_transform.not_null_laps_session_code.ccd0209ff1
+[0m03:30:52.013463 [debug] [Thread-6 (]: Failed to rollback 'test.f1_transform.not_null_laps_season.6c89aefec5'
+[0m03:30:52.016384 [debug] [Thread-6 (]: On test.f1_transform.not_null_laps_season.6c89aefec5: Close
+[0m03:30:52.016768 [info ] [Thread-6 (]: 11 of 22 PASS not_null_laps_season ............................................. [[32mPASS[0m in 0.06s]
+[0m03:30:52.019528 [debug] [Thread-6 (]: Finished running node test.f1_transform.not_null_laps_season.6c89aefec5
+[0m03:30:52.007103 [debug] [Thread-5 (]: SQL status: OK in 0.002 seconds
+[0m03:30:52.020938 [debug] [Thread-5 (]: On test.f1_transform.not_null_laps_round.c55865a754: ROLLBACK
+[0m03:30:52.025466 [debug] [Thread-5 (]: Failed to rollback 'test.f1_transform.not_null_laps_round.c55865a754'
+[0m03:30:52.025726 [debug] [Thread-5 (]: On test.f1_transform.not_null_laps_round.c55865a754: Close
+[0m03:30:52.029013 [info ] [Thread-5 (]: 10 of 22 PASS not_null_laps_round .............................................. [[32mPASS[0m in 0.07s]
+[0m03:30:52.029423 [debug] [Thread-5 (]: Finished running node test.f1_transform.not_null_laps_round.c55865a754
+[0m03:30:52.030948 [debug] [Thread-3 (]: Began running node model.f1_transform.driver_session_summary
+[0m03:30:52.031417 [info ] [Thread-3 (]: 13 of 22 START sql table model main_gold.driver_session_summary ................ [RUN]
+[0m03:30:52.031755 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.f1_transform.not_null_results_season.4571c4d0da, now model.f1_transform.driver_session_summary)
+[0m03:30:52.031986 [debug] [Thread-3 (]: Began compiling node model.f1_transform.driver_session_summary
+[0m03:30:52.033850 [debug] [Thread-3 (]: Writing injected SQL for node "model.f1_transform.driver_session_summary"
+[0m03:30:52.035354 [debug] [Thread-3 (]: Began executing node model.f1_transform.driver_session_summary
+[0m03:30:52.037188 [debug] [Thread-3 (]: Writing runtime sql for node "model.f1_transform.driver_session_summary"
+[0m03:30:52.038322 [debug] [Thread-3 (]: Using duckdb connection "model.f1_transform.driver_session_summary"
+[0m03:30:52.038543 [debug] [Thread-3 (]: On model.f1_transform.driver_session_summary: BEGIN
+[0m03:30:52.038756 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m03:30:52.045122 [debug] [Thread-3 (]: SQL status: OK in 0.006 seconds
+[0m03:30:52.045445 [debug] [Thread-3 (]: Using duckdb connection "model.f1_transform.driver_session_summary"
+[0m03:30:52.045685 [debug] [Thread-3 (]: On model.f1_transform.driver_session_summary: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.driver_session_summary"} */
+
+  
+    
+    
+
+    create  table
+      "f1"."main_gold"."driver_session_summary__dbt_tmp"
+  
+    as (
+      WITH laps AS (
+  SELECT * FROM "f1"."main_silver"."laps" WHERE laptime IS NOT NULL
+),
+driver_base AS (
+  SELECT
+    season,
+    round,
+    grand_prix,
+    session_code,
+    COALESCE(NULLIF(driver, ''), CAST(drivernumber AS VARCHAR)) AS driver,
+    drivernumber AS driver_number,
+    team,
+    laptime,
+    pitintime,
+    pitouttime
+  FROM laps
+),
+ranker AS (
+  SELECT
+    season, round, grand_prix, session_code, driver, driver_number, team, laptime,
+    ROW_NUMBER() OVER (
+      PARTITION BY season, round, grand_prix, session_code, driver, driver_number, team
+      ORDER BY laptime ASC NULLS LAST
+    ) AS rn
+  FROM driver_base
+),
+pb AS (
+  SELECT
+    season, round, grand_prix, session_code, driver, driver_number, team,
+    SUM(CASE WHEN rn = 1 THEN 1 ELSE 0 END) AS personal_best_laps
+  FROM ranker
+  GROUP BY 1,2,3,4,5,6,7
+),
+agg AS (
+  SELECT
+    season, round, grand_prix, session_code, driver, driver_number, team,
+    COUNT(*) AS laps_total,
+    SUM(CASE WHEN pitintime IS NULL AND pitouttime IS NULL THEN 1 ELSE 0 END) AS laps_on_track,
+    SUM(CASE WHEN pitintime IS NOT NULL OR  pitouttime IS NOT NULL THEN 1 ELSE 0 END) AS pitstops,
+    MIN(laptime) AS best_lap_time
+  FROM driver_base
+  GROUP BY 1,2,3,4,5,6,7
+)
+SELECT
+  a.season, a.round, a.grand_prix, a.session_code,
+  a.driver, a.driver_number, a.team,
+  a.laps_total, a.laps_on_track, a.pitstops, a.best_lap_time,
+  COALESCE(pb.personal_best_laps, 0) AS personal_best_laps
+FROM agg a
+LEFT JOIN pb
+  ON  a.season       = pb.season
+  AND a.round        = pb.round
+  AND a.grand_prix   = pb.grand_prix
+  AND a.session_code = pb.session_code
+  AND a.driver       = pb.driver
+  AND a.driver_number= pb.driver_number
+  AND a.team         = pb.team
+    );
+  
+  
+[0m03:30:52.080010 [debug] [Thread-3 (]: SQL status: OK in 0.034 seconds
+[0m03:30:52.083312 [debug] [Thread-3 (]: Using duckdb connection "model.f1_transform.driver_session_summary"
+[0m03:30:52.083591 [debug] [Thread-3 (]: On model.f1_transform.driver_session_summary: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.driver_session_summary"} */
+alter table "f1"."main_gold"."driver_session_summary" rename to "driver_session_summary__dbt_backup"
+[0m03:30:52.084093 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m03:30:52.085540 [debug] [Thread-3 (]: Using duckdb connection "model.f1_transform.driver_session_summary"
+[0m03:30:52.085770 [debug] [Thread-3 (]: On model.f1_transform.driver_session_summary: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.driver_session_summary"} */
+alter table "f1"."main_gold"."driver_session_summary__dbt_tmp" rename to "driver_session_summary"
+[0m03:30:52.086145 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m03:30:52.086886 [debug] [Thread-3 (]: On model.f1_transform.driver_session_summary: COMMIT
+[0m03:30:52.087125 [debug] [Thread-3 (]: Using duckdb connection "model.f1_transform.driver_session_summary"
+[0m03:30:52.087331 [debug] [Thread-3 (]: On model.f1_transform.driver_session_summary: COMMIT
+[0m03:30:52.095442 [debug] [Thread-3 (]: SQL status: OK in 0.008 seconds
+[0m03:30:52.096749 [debug] [Thread-3 (]: Using duckdb connection "model.f1_transform.driver_session_summary"
+[0m03:30:52.096967 [debug] [Thread-3 (]: On model.f1_transform.driver_session_summary: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.driver_session_summary"} */
+drop table if exists "f1"."main_gold"."driver_session_summary__dbt_backup" cascade
+[0m03:30:52.097928 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m03:30:52.098736 [debug] [Thread-3 (]: On model.f1_transform.driver_session_summary: Close
+[0m03:30:52.143549 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '98f9c883-aef3-4f55-8aae-3da11d08872f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaac69fd0>]}
+[0m03:30:52.144073 [info ] [Thread-3 (]: 13 of 22 OK created sql table model main_gold.driver_session_summary ........... [[32mOK[0m in 0.11s]
+[0m03:30:52.144536 [debug] [Thread-3 (]: Finished running node model.f1_transform.driver_session_summary
+[0m03:30:52.145072 [debug] [Thread-8 (]: Began running node test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2
+[0m03:30:52.145368 [debug] [Thread-1 (]: Began running node test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71
+[0m03:30:52.145637 [debug] [Thread-7 (]: Began running node test.f1_transform.not_null_driver_session_summary_season.30188e778b
+[0m03:30:52.145804 [info ] [Thread-8 (]: 14 of 22 START test not_null_driver_session_summary_driver ..................... [RUN]
+[0m03:30:52.146016 [debug] [Thread-2 (]: Began running node test.f1_transform.not_null_driver_session_summary_session_code.68938a7773
+[0m03:30:52.146359 [info ] [Thread-1 (]: 15 of 22 START test not_null_driver_session_summary_round ...................... [RUN]
+[0m03:30:52.146686 [info ] [Thread-7 (]: 16 of 22 START test not_null_driver_session_summary_season ..................... [RUN]
+[0m03:30:52.147058 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly test.f1_transform.not_null_results_session_code.564091e2b6, now test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2)
+[0m03:30:52.147371 [info ] [Thread-2 (]: 17 of 22 START test not_null_driver_session_summary_session_code ............... [RUN]
+[0m03:30:52.147693 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.f1_transform.laps, now test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71)
+[0m03:30:52.148007 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly test.f1_transform.not_null_weather_session_code.2cbdf7ee2a, now test.f1_transform.not_null_driver_session_summary_season.30188e778b)
+[0m03:30:52.148250 [debug] [Thread-8 (]: Began compiling node test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2
+[0m03:30:52.148598 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.f1_transform.not_null_laps_session_code.ccd0209ff1, now test.f1_transform.not_null_driver_session_summary_session_code.68938a7773)
+[0m03:30:52.148874 [debug] [Thread-1 (]: Began compiling node test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71
+[0m03:30:52.149170 [debug] [Thread-7 (]: Began compiling node test.f1_transform.not_null_driver_session_summary_season.30188e778b
+[0m03:30:52.151562 [debug] [Thread-8 (]: Writing injected SQL for node "test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2"
+[0m03:30:52.151951 [debug] [Thread-2 (]: Began compiling node test.f1_transform.not_null_driver_session_summary_session_code.68938a7773
+[0m03:30:52.154216 [debug] [Thread-1 (]: Writing injected SQL for node "test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71"
+[0m03:30:52.156331 [debug] [Thread-7 (]: Writing injected SQL for node "test.f1_transform.not_null_driver_session_summary_season.30188e778b"
+[0m03:30:52.158650 [debug] [Thread-2 (]: Writing injected SQL for node "test.f1_transform.not_null_driver_session_summary_session_code.68938a7773"
+[0m03:30:52.159359 [debug] [Thread-8 (]: Began executing node test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2
+[0m03:30:52.159810 [debug] [Thread-1 (]: Began executing node test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71
+[0m03:30:52.162793 [debug] [Thread-1 (]: Writing runtime sql for node "test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71"
+[0m03:30:52.161439 [debug] [Thread-7 (]: Began executing node test.f1_transform.not_null_driver_session_summary_season.30188e778b
+[0m03:30:52.161729 [debug] [Thread-2 (]: Began executing node test.f1_transform.not_null_driver_session_summary_session_code.68938a7773
+[0m03:30:52.165287 [debug] [Thread-2 (]: Writing runtime sql for node "test.f1_transform.not_null_driver_session_summary_session_code.68938a7773"
+[0m03:30:52.164104 [debug] [Thread-7 (]: Writing runtime sql for node "test.f1_transform.not_null_driver_session_summary_season.30188e778b"
+[0m03:30:52.161108 [debug] [Thread-8 (]: Writing runtime sql for node "test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2"
+[0m03:30:52.165745 [debug] [Thread-1 (]: Using duckdb connection "test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71"
+[0m03:30:52.166290 [debug] [Thread-2 (]: Using duckdb connection "test.f1_transform.not_null_driver_session_summary_session_code.68938a7773"
+[0m03:30:52.166531 [debug] [Thread-1 (]: On test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71: BEGIN
+[0m03:30:52.167192 [debug] [Thread-7 (]: Using duckdb connection "test.f1_transform.not_null_driver_session_summary_season.30188e778b"
+[0m03:30:52.167436 [debug] [Thread-2 (]: On test.f1_transform.not_null_driver_session_summary_session_code.68938a7773: BEGIN
+[0m03:30:52.167589 [debug] [Thread-8 (]: Using duckdb connection "test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2"
+[0m03:30:52.168523 [debug] [Thread-8 (]: On test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2: BEGIN
+[0m03:30:52.168074 [debug] [Thread-7 (]: On test.f1_transform.not_null_driver_session_summary_season.30188e778b: BEGIN
+[0m03:30:52.168315 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m03:30:52.167819 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m03:30:52.168698 [debug] [Thread-8 (]: Opening a new connection, currently in state closed
+[0m03:30:52.168968 [debug] [Thread-7 (]: Opening a new connection, currently in state closed
+[0m03:30:52.178649 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m03:30:52.178960 [debug] [Thread-2 (]: SQL status: OK in 0.011 seconds
+[0m03:30:52.179100 [debug] [Thread-8 (]: SQL status: OK in 0.010 seconds
+[0m03:30:52.179318 [debug] [Thread-7 (]: SQL status: OK in 0.010 seconds
+[0m03:30:52.179490 [debug] [Thread-1 (]: Using duckdb connection "test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71"
+[0m03:30:52.180473 [debug] [Thread-1 (]: On test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select round
+from "f1"."main_gold"."driver_session_summary"
+where round is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:52.179986 [debug] [Thread-8 (]: Using duckdb connection "test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2"
+[0m03:30:52.180236 [debug] [Thread-7 (]: Using duckdb connection "test.f1_transform.not_null_driver_session_summary_season.30188e778b"
+[0m03:30:52.181602 [debug] [Thread-7 (]: On test.f1_transform.not_null_driver_session_summary_season.30188e778b: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_driver_session_summary_season.30188e778b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select season
+from "f1"."main_gold"."driver_session_summary"
+where season is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:52.181180 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m03:30:52.181362 [debug] [Thread-8 (]: On test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select driver
+from "f1"."main_gold"."driver_session_summary"
+where driver is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:52.179740 [debug] [Thread-2 (]: Using duckdb connection "test.f1_transform.not_null_driver_session_summary_session_code.68938a7773"
+[0m03:30:52.183576 [debug] [Thread-2 (]: On test.f1_transform.not_null_driver_session_summary_session_code.68938a7773: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_driver_session_summary_session_code.68938a7773"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select session_code
+from "f1"."main_gold"."driver_session_summary"
+where session_code is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:52.183084 [debug] [Thread-1 (]: On test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71: ROLLBACK
+[0m03:30:52.182189 [debug] [Thread-7 (]: SQL status: OK in 0.000 seconds
+[0m03:30:52.183985 [debug] [Thread-8 (]: SQL status: OK in 0.001 seconds
+[0m03:30:52.184328 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m03:30:52.184616 [debug] [Thread-1 (]: Failed to rollback 'test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71'
+[0m03:30:52.185428 [debug] [Thread-7 (]: On test.f1_transform.not_null_driver_session_summary_season.30188e778b: ROLLBACK
+[0m03:30:52.186107 [debug] [Thread-8 (]: On test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2: ROLLBACK
+[0m03:30:52.186821 [debug] [Thread-2 (]: On test.f1_transform.not_null_driver_session_summary_session_code.68938a7773: ROLLBACK
+[0m03:30:52.187062 [debug] [Thread-1 (]: On test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71: Close
+[0m03:30:52.187388 [debug] [Thread-7 (]: Failed to rollback 'test.f1_transform.not_null_driver_session_summary_season.30188e778b'
+[0m03:30:52.187724 [debug] [Thread-8 (]: Failed to rollback 'test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2'
+[0m03:30:52.188011 [debug] [Thread-2 (]: Failed to rollback 'test.f1_transform.not_null_driver_session_summary_session_code.68938a7773'
+[0m03:30:52.188466 [info ] [Thread-1 (]: 15 of 22 PASS not_null_driver_session_summary_round ............................ [[32mPASS[0m in 0.04s]
+[0m03:30:52.188751 [debug] [Thread-7 (]: On test.f1_transform.not_null_driver_session_summary_season.30188e778b: Close
+[0m03:30:52.189024 [debug] [Thread-8 (]: On test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2: Close
+[0m03:30:52.189300 [debug] [Thread-2 (]: On test.f1_transform.not_null_driver_session_summary_session_code.68938a7773: Close
+[0m03:30:52.189692 [debug] [Thread-1 (]: Finished running node test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71
+[0m03:30:52.190038 [info ] [Thread-7 (]: 16 of 22 PASS not_null_driver_session_summary_season ........................... [[32mPASS[0m in 0.04s]
+[0m03:30:52.190433 [info ] [Thread-8 (]: 14 of 22 PASS not_null_driver_session_summary_driver ........................... [[32mPASS[0m in 0.04s]
+[0m03:30:52.192282 [debug] [Thread-8 (]: Finished running node test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2
+[0m03:30:52.191932 [debug] [Thread-7 (]: Finished running node test.f1_transform.not_null_driver_session_summary_season.30188e778b
+[0m03:30:52.191679 [info ] [Thread-2 (]: 17 of 22 PASS not_null_driver_session_summary_session_code ..................... [[32mPASS[0m in 0.04s]
+[0m03:30:52.192901 [debug] [Thread-2 (]: Finished running node test.f1_transform.not_null_driver_session_summary_session_code.68938a7773
+[0m03:30:52.193421 [debug] [Thread-5 (]: Began running node model.f1_transform.team_event_summary
+[0m03:30:52.193736 [info ] [Thread-5 (]: 18 of 22 START sql table model main_gold.team_event_summary .................... [RUN]
+[0m03:30:52.194014 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.f1_transform.not_null_laps_round.c55865a754, now model.f1_transform.team_event_summary)
+[0m03:30:52.194224 [debug] [Thread-5 (]: Began compiling node model.f1_transform.team_event_summary
+[0m03:30:52.195849 [debug] [Thread-5 (]: Writing injected SQL for node "model.f1_transform.team_event_summary"
+[0m03:30:52.196628 [debug] [Thread-5 (]: Began executing node model.f1_transform.team_event_summary
+[0m03:30:52.199502 [debug] [Thread-5 (]: Writing runtime sql for node "model.f1_transform.team_event_summary"
+[0m03:30:52.200477 [debug] [Thread-5 (]: Using duckdb connection "model.f1_transform.team_event_summary"
+[0m03:30:52.200700 [debug] [Thread-5 (]: On model.f1_transform.team_event_summary: BEGIN
+[0m03:30:52.200886 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m03:30:52.206576 [debug] [Thread-5 (]: SQL status: OK in 0.006 seconds
+[0m03:30:52.206883 [debug] [Thread-5 (]: Using duckdb connection "model.f1_transform.team_event_summary"
+[0m03:30:52.207105 [debug] [Thread-5 (]: On model.f1_transform.team_event_summary: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.team_event_summary"} */
+
+  
+    
+    
+
+    create  table
+      "f1"."main_gold"."team_event_summary__dbt_tmp"
+  
+    as (
+      WITH driver AS (
+  SELECT * FROM "f1"."main_gold"."driver_session_summary"
+),
+race_only AS (
+  SELECT * FROM driver WHERE session_code IN ('R','Q','S')
+),
+team_agg AS (
+  SELECT
+    season, round, grand_prix, session_code,
+    team,
+    SUM(laps_on_track) AS team_laps_on_track,
+    SUM(pitstops)      AS team_pitstops,
+    MIN(best_lap_time) AS team_best_lap_time
+  FROM race_only
+  GROUP BY 1,2,3,4,5
+)
+SELECT * FROM team_agg
+    );
+  
+  
+[0m03:30:52.216403 [debug] [Thread-5 (]: SQL status: OK in 0.009 seconds
+[0m03:30:52.218176 [debug] [Thread-5 (]: Using duckdb connection "model.f1_transform.team_event_summary"
+[0m03:30:52.218477 [debug] [Thread-5 (]: On model.f1_transform.team_event_summary: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.team_event_summary"} */
+alter table "f1"."main_gold"."team_event_summary" rename to "team_event_summary__dbt_backup"
+[0m03:30:52.218983 [debug] [Thread-5 (]: SQL status: OK in 0.000 seconds
+[0m03:30:52.220487 [debug] [Thread-5 (]: Using duckdb connection "model.f1_transform.team_event_summary"
+[0m03:30:52.220736 [debug] [Thread-5 (]: On model.f1_transform.team_event_summary: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.team_event_summary"} */
+alter table "f1"."main_gold"."team_event_summary__dbt_tmp" rename to "team_event_summary"
+[0m03:30:52.221118 [debug] [Thread-5 (]: SQL status: OK in 0.000 seconds
+[0m03:30:52.221818 [debug] [Thread-5 (]: On model.f1_transform.team_event_summary: COMMIT
+[0m03:30:52.222025 [debug] [Thread-5 (]: Using duckdb connection "model.f1_transform.team_event_summary"
+[0m03:30:52.222202 [debug] [Thread-5 (]: On model.f1_transform.team_event_summary: COMMIT
+[0m03:30:52.224600 [debug] [Thread-5 (]: SQL status: OK in 0.002 seconds
+[0m03:30:52.225999 [debug] [Thread-5 (]: Using duckdb connection "model.f1_transform.team_event_summary"
+[0m03:30:52.226297 [debug] [Thread-5 (]: On model.f1_transform.team_event_summary: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "model.f1_transform.team_event_summary"} */
+drop table if exists "f1"."main_gold"."team_event_summary__dbt_backup" cascade
+[0m03:30:52.228075 [debug] [Thread-5 (]: SQL status: OK in 0.001 seconds
+[0m03:30:52.229286 [debug] [Thread-5 (]: On model.f1_transform.team_event_summary: Close
+[0m03:30:52.272791 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '98f9c883-aef3-4f55-8aae-3da11d08872f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac1bcbd0>]}
+[0m03:30:52.276501 [info ] [Thread-5 (]: 18 of 22 OK created sql table model main_gold.team_event_summary ............... [[32mOK[0m in 0.08s]
+[0m03:30:52.280122 [debug] [Thread-5 (]: Finished running node model.f1_transform.team_event_summary
+[0m03:30:52.281726 [debug] [Thread-3 (]: Began running node test.f1_transform.not_null_team_event_summary_round.bddcc074d0
+[0m03:30:52.281947 [debug] [Thread-6 (]: Began running node test.f1_transform.not_null_team_event_summary_season.19b7a0fa18
+[0m03:30:52.282156 [debug] [Thread-1 (]: Began running node test.f1_transform.not_null_team_event_summary_session_code.e054c7119a
+[0m03:30:52.282362 [debug] [Thread-8 (]: Began running node test.f1_transform.not_null_team_event_summary_team.23b41750d4
+[0m03:30:52.282633 [info ] [Thread-3 (]: 19 of 22 START test not_null_team_event_summary_round .......................... [RUN]
+[0m03:30:52.283015 [info ] [Thread-6 (]: 20 of 22 START test not_null_team_event_summary_season ......................... [RUN]
+[0m03:30:52.283349 [info ] [Thread-1 (]: 21 of 22 START test not_null_team_event_summary_session_code ................... [RUN]
+[0m03:30:52.283664 [info ] [Thread-8 (]: 22 of 22 START test not_null_team_event_summary_team ........................... [RUN]
+[0m03:30:52.284033 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.f1_transform.driver_session_summary, now test.f1_transform.not_null_team_event_summary_round.bddcc074d0)
+[0m03:30:52.284419 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.f1_transform.not_null_laps_season.6c89aefec5, now test.f1_transform.not_null_team_event_summary_season.19b7a0fa18)
+[0m03:30:52.284726 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.f1_transform.not_null_driver_session_summary_round.ff7c8fdb71, now test.f1_transform.not_null_team_event_summary_session_code.e054c7119a)
+[0m03:30:52.285028 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly test.f1_transform.not_null_driver_session_summary_driver.2e5c4ae4e2, now test.f1_transform.not_null_team_event_summary_team.23b41750d4)
+[0m03:30:52.285308 [debug] [Thread-3 (]: Began compiling node test.f1_transform.not_null_team_event_summary_round.bddcc074d0
+[0m03:30:52.285587 [debug] [Thread-6 (]: Began compiling node test.f1_transform.not_null_team_event_summary_season.19b7a0fa18
+[0m03:30:52.285851 [debug] [Thread-1 (]: Began compiling node test.f1_transform.not_null_team_event_summary_session_code.e054c7119a
+[0m03:30:52.286109 [debug] [Thread-8 (]: Began compiling node test.f1_transform.not_null_team_event_summary_team.23b41750d4
+[0m03:30:52.288547 [debug] [Thread-3 (]: Writing injected SQL for node "test.f1_transform.not_null_team_event_summary_round.bddcc074d0"
+[0m03:30:52.290690 [debug] [Thread-6 (]: Writing injected SQL for node "test.f1_transform.not_null_team_event_summary_season.19b7a0fa18"
+[0m03:30:52.292746 [debug] [Thread-1 (]: Writing injected SQL for node "test.f1_transform.not_null_team_event_summary_session_code.e054c7119a"
+[0m03:30:52.297133 [debug] [Thread-8 (]: Writing injected SQL for node "test.f1_transform.not_null_team_event_summary_team.23b41750d4"
+[0m03:30:52.298468 [debug] [Thread-3 (]: Began executing node test.f1_transform.not_null_team_event_summary_round.bddcc074d0
+[0m03:30:52.298877 [debug] [Thread-6 (]: Began executing node test.f1_transform.not_null_team_event_summary_season.19b7a0fa18
+[0m03:30:52.303324 [debug] [Thread-3 (]: Writing runtime sql for node "test.f1_transform.not_null_team_event_summary_round.bddcc074d0"
+[0m03:30:52.304181 [debug] [Thread-1 (]: Began executing node test.f1_transform.not_null_team_event_summary_session_code.e054c7119a
+[0m03:30:52.304419 [debug] [Thread-8 (]: Began executing node test.f1_transform.not_null_team_event_summary_team.23b41750d4
+[0m03:30:52.305741 [debug] [Thread-6 (]: Writing runtime sql for node "test.f1_transform.not_null_team_event_summary_season.19b7a0fa18"
+[0m03:30:52.307279 [debug] [Thread-1 (]: Writing runtime sql for node "test.f1_transform.not_null_team_event_summary_session_code.e054c7119a"
+[0m03:30:52.308936 [debug] [Thread-8 (]: Writing runtime sql for node "test.f1_transform.not_null_team_event_summary_team.23b41750d4"
+[0m03:30:52.310239 [debug] [Thread-3 (]: Using duckdb connection "test.f1_transform.not_null_team_event_summary_round.bddcc074d0"
+[0m03:30:52.324266 [debug] [Thread-6 (]: Using duckdb connection "test.f1_transform.not_null_team_event_summary_season.19b7a0fa18"
+[0m03:30:52.332093 [debug] [Thread-1 (]: Using duckdb connection "test.f1_transform.not_null_team_event_summary_session_code.e054c7119a"
+[0m03:30:52.332343 [debug] [Thread-3 (]: On test.f1_transform.not_null_team_event_summary_round.bddcc074d0: BEGIN
+[0m03:30:52.339264 [debug] [Thread-6 (]: On test.f1_transform.not_null_team_event_summary_season.19b7a0fa18: BEGIN
+[0m03:30:52.343884 [debug] [Thread-1 (]: On test.f1_transform.not_null_team_event_summary_session_code.e054c7119a: BEGIN
+[0m03:30:52.344161 [debug] [Thread-8 (]: Using duckdb connection "test.f1_transform.not_null_team_event_summary_team.23b41750d4"
+[0m03:30:52.348309 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m03:30:52.348588 [debug] [Thread-6 (]: Opening a new connection, currently in state closed
+[0m03:30:52.348857 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m03:30:52.349546 [debug] [Thread-8 (]: On test.f1_transform.not_null_team_event_summary_team.23b41750d4: BEGIN
+[0m03:30:52.351435 [debug] [Thread-8 (]: Opening a new connection, currently in state closed
+[0m03:30:52.356412 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m03:30:52.356716 [debug] [Thread-3 (]: SQL status: OK in 0.008 seconds
+[0m03:30:52.357017 [debug] [Thread-6 (]: SQL status: OK in 0.008 seconds
+[0m03:30:52.357214 [debug] [Thread-8 (]: SQL status: OK in 0.006 seconds
+[0m03:30:52.357496 [debug] [Thread-1 (]: Using duckdb connection "test.f1_transform.not_null_team_event_summary_session_code.e054c7119a"
+[0m03:30:52.357750 [debug] [Thread-3 (]: Using duckdb connection "test.f1_transform.not_null_team_event_summary_round.bddcc074d0"
+[0m03:30:52.358027 [debug] [Thread-6 (]: Using duckdb connection "test.f1_transform.not_null_team_event_summary_season.19b7a0fa18"
+[0m03:30:52.358276 [debug] [Thread-8 (]: Using duckdb connection "test.f1_transform.not_null_team_event_summary_team.23b41750d4"
+[0m03:30:52.358564 [debug] [Thread-1 (]: On test.f1_transform.not_null_team_event_summary_session_code.e054c7119a: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_team_event_summary_session_code.e054c7119a"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select session_code
+from "f1"."main_gold"."team_event_summary"
+where session_code is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:52.358823 [debug] [Thread-3 (]: On test.f1_transform.not_null_team_event_summary_round.bddcc074d0: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_team_event_summary_round.bddcc074d0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select round
+from "f1"."main_gold"."team_event_summary"
+where round is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:52.359112 [debug] [Thread-6 (]: On test.f1_transform.not_null_team_event_summary_season.19b7a0fa18: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_team_event_summary_season.19b7a0fa18"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select season
+from "f1"."main_gold"."team_event_summary"
+where season is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:52.359372 [debug] [Thread-8 (]: On test.f1_transform.not_null_team_event_summary_team.23b41750d4: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "f1_duckdb", "target_name": "local", "node_id": "test.f1_transform.not_null_team_event_summary_team.23b41750d4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select team
+from "f1"."main_gold"."team_event_summary"
+where team is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:30:52.360080 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m03:30:52.360330 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m03:30:52.360954 [debug] [Thread-6 (]: SQL status: OK in 0.000 seconds
+[0m03:30:52.361132 [debug] [Thread-8 (]: SQL status: OK in 0.000 seconds
+[0m03:30:52.361938 [debug] [Thread-1 (]: On test.f1_transform.not_null_team_event_summary_session_code.e054c7119a: ROLLBACK
+[0m03:30:52.362685 [debug] [Thread-3 (]: On test.f1_transform.not_null_team_event_summary_round.bddcc074d0: ROLLBACK
+[0m03:30:52.363500 [debug] [Thread-6 (]: On test.f1_transform.not_null_team_event_summary_season.19b7a0fa18: ROLLBACK
+[0m03:30:52.364165 [debug] [Thread-8 (]: On test.f1_transform.not_null_team_event_summary_team.23b41750d4: ROLLBACK
+[0m03:30:52.364637 [debug] [Thread-1 (]: Failed to rollback 'test.f1_transform.not_null_team_event_summary_session_code.e054c7119a'
+[0m03:30:52.365010 [debug] [Thread-3 (]: Failed to rollback 'test.f1_transform.not_null_team_event_summary_round.bddcc074d0'
+[0m03:30:52.365289 [debug] [Thread-6 (]: Failed to rollback 'test.f1_transform.not_null_team_event_summary_season.19b7a0fa18'
+[0m03:30:52.365594 [debug] [Thread-8 (]: Failed to rollback 'test.f1_transform.not_null_team_event_summary_team.23b41750d4'
+[0m03:30:52.365880 [debug] [Thread-1 (]: On test.f1_transform.not_null_team_event_summary_session_code.e054c7119a: Close
+[0m03:30:52.366115 [debug] [Thread-3 (]: On test.f1_transform.not_null_team_event_summary_round.bddcc074d0: Close
+[0m03:30:52.366393 [debug] [Thread-6 (]: On test.f1_transform.not_null_team_event_summary_season.19b7a0fa18: Close
+[0m03:30:52.366624 [debug] [Thread-8 (]: On test.f1_transform.not_null_team_event_summary_team.23b41750d4: Close
+[0m03:30:52.367028 [info ] [Thread-1 (]: 21 of 22 PASS not_null_team_event_summary_session_code ......................... [[32mPASS[0m in 0.08s]
+[0m03:30:52.367430 [info ] [Thread-3 (]: 19 of 22 PASS not_null_team_event_summary_round ................................ [[32mPASS[0m in 0.08s]
+[0m03:30:52.367763 [info ] [Thread-6 (]: 20 of 22 PASS not_null_team_event_summary_season ............................... [[32mPASS[0m in 0.08s]
+[0m03:30:52.368376 [debug] [Thread-1 (]: Finished running node test.f1_transform.not_null_team_event_summary_session_code.e054c7119a
+[0m03:30:52.368882 [info ] [Thread-8 (]: 22 of 22 PASS not_null_team_event_summary_team ................................. [[32mPASS[0m in 0.08s]
+[0m03:30:52.369223 [debug] [Thread-3 (]: Finished running node test.f1_transform.not_null_team_event_summary_round.bddcc074d0
+[0m03:30:52.369588 [debug] [Thread-6 (]: Finished running node test.f1_transform.not_null_team_event_summary_season.19b7a0fa18
+[0m03:30:52.370052 [debug] [Thread-8 (]: Finished running node test.f1_transform.not_null_team_event_summary_team.23b41750d4
+[0m03:30:52.372101 [debug] [MainThread]: Using duckdb connection "master"
+[0m03:30:52.372393 [debug] [MainThread]: On master: BEGIN
+[0m03:30:52.372601 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:30:52.379999 [debug] [MainThread]: SQL status: OK in 0.007 seconds
+[0m03:30:52.380408 [debug] [MainThread]: On master: COMMIT
+[0m03:30:52.380859 [debug] [MainThread]: Using duckdb connection "master"
+[0m03:30:52.381149 [debug] [MainThread]: On master: COMMIT
+[0m03:30:52.381769 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m03:30:52.382053 [debug] [MainThread]: On master: Close
+[0m03:30:52.383585 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:30:52.383832 [debug] [MainThread]: Connection 'list_f1_main_gold' was properly closed.
+[0m03:30:52.383993 [debug] [MainThread]: Connection 'list_f1_main_silver' was properly closed.
+[0m03:30:52.384143 [debug] [MainThread]: Connection 'test.f1_transform.not_null_team_event_summary_session_code.e054c7119a' was properly closed.
+[0m03:30:52.384316 [debug] [MainThread]: Connection 'test.f1_transform.not_null_driver_session_summary_session_code.68938a7773' was properly closed.
+[0m03:30:52.384463 [debug] [MainThread]: Connection 'test.f1_transform.not_null_team_event_summary_round.bddcc074d0' was properly closed.
+[0m03:30:52.384604 [debug] [MainThread]: Connection 'model.f1_transform.team_event_summary' was properly closed.
+[0m03:30:52.384746 [debug] [MainThread]: Connection 'test.f1_transform.not_null_driver_session_summary_season.30188e778b' was properly closed.
+[0m03:30:52.384885 [debug] [MainThread]: Connection 'test.f1_transform.not_null_team_event_summary_season.19b7a0fa18' was properly closed.
+[0m03:30:52.385026 [debug] [MainThread]: Connection 'test.f1_transform.not_null_results_round.69e7ee2263' was properly closed.
+[0m03:30:52.385232 [debug] [MainThread]: Connection 'test.f1_transform.not_null_team_event_summary_team.23b41750d4' was properly closed.
+[0m03:30:52.385854 [info ] [MainThread]: 
+[0m03:30:52.386129 [info ] [MainThread]: Finished running 5 table models, 17 data tests in 0 hours 0 minutes and 2.51 seconds (2.51s).
+[0m03:30:52.387739 [debug] [MainThread]: Command end result
+[0m03:30:52.413805 [info ] [MainThread]: 
+[0m03:30:52.414336 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:30:52.414665 [info ] [MainThread]: 
+[0m03:30:52.414954 [info ] [MainThread]: Done. PASS=22 WARN=0 ERROR=0 SKIP=0 TOTAL=22
+[0m03:30:52.418364 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 3.0335243, "process_user_time": 2.682437, "process_kernel_time": 0.949453, "process_mem_max_rss": "248076", "process_in_blocks": "5000", "process_out_blocks": "46748"}
+[0m03:30:52.420533 [debug] [MainThread]: Command `dbt build` succeeded at 03:30:52.419806 after 3.04 seconds
+[0m03:30:52.422191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb70f8f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb70f8690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb70f96d0>]}
+[0m03:30:52.422752 [debug] [MainThread]: Flushing usage events

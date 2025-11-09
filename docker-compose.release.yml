@@ -1,0 +1,7 @@
+services:
+  ai:
+    image: shravans31/f1-lakehouse-ai:${RELEASE_TAG}
+    build: null
+  dashboard:
+    image: shravans31/f1-lakehouse-dashboard:${RELEASE_TAG}
+    build: null
