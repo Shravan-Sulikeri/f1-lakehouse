@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "f1-ingestion"
+version = "0.1.0"
+description = "Fast-F1 Bronze ingestion to Parquet"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastf1 = ">=3.3,<4.0"
+pandas = "^2.2.2"
+pyarrow = "^17.0.0"
+duckdb = "^1.1.3"
+loguru = "^0.7.2"
+python-slugify = "^8.0.4"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.0"

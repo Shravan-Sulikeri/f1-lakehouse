@@ -1,0 +1,29 @@
+version: 2
+models:
+  - name: laps
+    schema: silver
+    columns:
+      - name: season
+        tests: [not_null]
+      - name: round
+        tests: [not_null]
+      - name: session_code
+        tests: [not_null]
+  - name: weather
+    schema: silver
+    columns:
+      - name: season
+        tests: [not_null]
+      - name: round
+        tests: [not_null]
+      - name: session_code
+        tests: [not_null]
+  - name: results
+    schema: silver
+    columns:
+      - name: season
+        tests: [not_null]
+      - name: round
+        tests: [not_null]
+      - name: session_code
+        tests: [not_null]

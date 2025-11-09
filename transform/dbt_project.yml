@@ -1,0 +1,11 @@
+name: "f1_transform"
+version: "1.0.0"
+profile: "f1_duckdb"
+model-paths: ["models"]
+models:
+  +materialized: table
+  f1_transform:
+    silver:
+      +schema: silver
+    gold:
+      +schema: gold

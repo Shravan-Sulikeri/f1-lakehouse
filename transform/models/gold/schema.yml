@@ -1,0 +1,24 @@
+version: 2
+models:
+  - name: driver_session_summary
+    schema: gold
+    columns:
+      - name: season
+        tests: [not_null]
+      - name: round
+        tests: [not_null]
+      - name: session_code
+        tests: [not_null]
+      - name: driver
+        tests: [not_null]
+  - name: team_event_summary
+    schema: gold
+    columns:
+      - name: season
+        tests: [not_null]
+      - name: round
+        tests: [not_null]
+      - name: session_code
+        tests: [not_null]
+      - name: team
+        tests: [not_null]

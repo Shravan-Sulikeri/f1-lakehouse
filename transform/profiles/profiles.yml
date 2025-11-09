@@ -1,0 +1,7 @@
+f1_duckdb:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: /opt/data/warehouse/f1.duckdb
+      threads: 8

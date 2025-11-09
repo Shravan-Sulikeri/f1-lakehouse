@@ -1,0 +1,52 @@
+services:
+  ingestion:
+    build:
+      context: .
+      dockerfile: docker/ingestion/Dockerfile
+    container_name: f1_ingestion
+    env_file: .env
+    volumes:
+      - ${EXTERNAL_DATA_ROOT}:/opt/data
+      - ./ingestion:/opt/ingestion
+    working_dir: /opt/ingestion
+    command: ["bash","-lc","export PYTHONPATH=/opt/ingestion/src; poetry run python -m ingestion.fastf1_ingest"]
+
+  dbt:
+    build:
+      context: .
+      dockerfile: docker/dbt/Dockerfile
+    container_name: f1_dbt
+    env_file: .env
+    environment:
+      DBT_PROFILES_DIR: /opt/transform/profiles
+    volumes:
+      - ${EXTERNAL_DATA_ROOT}:/opt/data
+      - ./transform:/opt/transform
+    working_dir: /opt/transform
+    command: ["bash","-lc","dbt deps && dbt build"]
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: docker/dashboard/Dockerfile
+    container_name: f1_dashboard
+    env_file: .env
+    ports: ["8501:8501"]
+    volumes:
+      - ${EXTERNAL_DATA_ROOT}:/opt/data
+      - ./dashboard:/opt/dashboard
+    working_dir: /opt/dashboard
+    command: ["bash","-lc","streamlit run app.py --server.address 0.0.0.0 --server.port 8501"]
+
+  ai:
+    build:
+      context: .
+      dockerfile: docker/ai/Dockerfile
+    container_name: f1_ai
+    env_file: .env
+    ports: ["8000:8000"]
+    volumes:
+      - ${EXTERNAL_DATA_ROOT}:/opt/data
+      - ./ai/rag_api:/opt/ai
+    working_dir: /opt/ai
+    command: ["bash","-lc","python --version || true; echo 'ai container ready'"]
