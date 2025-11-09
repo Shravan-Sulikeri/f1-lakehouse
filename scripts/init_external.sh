@@ -31,7 +31,7 @@ fi
 echo "Preparing external data root at $EXTERNAL_DATA_ROOT"
 mkdir -p "$EXTERNAL_DATA_ROOT"
 
-subdirs=(bronze silver gold cache warehouse)
+subdirs=(bronze silver gold cache warehouse ollama)
 for dir in "${subdirs[@]}"; do
   target="$EXTERNAL_DATA_ROOT/$dir"
   mkdir -p "$target"

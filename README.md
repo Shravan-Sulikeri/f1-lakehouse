@@ -16,6 +16,7 @@ Fully containerized Formula 1 “bronze → silver → gold” lakehouse built o
 - **DuckDB + dbt**: hive-partitioned bronze feeds Silver tables and Gold analytics marts (driver and team summaries).
 - **Quality gates**: `scripts/check_gold.sh` rebuilds models and inspects row counts/samples directly in DuckDB.
 - **Dashboard ready**: Streamlit container reads the warehouse, auto-detects schema prefixes (`silver` vs `main_silver`) and surfaces KPIs plus fastest laps.
+- **AI Copilot**: FastAPI service + Ollama (llama3.2:3b) translate natural language into read-only DuckDB SQL, surfaced in Streamlit as an “AI Copilot” panel.
 
 ## Repository Layout
 ```
@@ -34,6 +35,8 @@ f1-lakehouse/
 │   └── models/
 │       ├── silver/              # bronze → silver hive readers
 │       └── gold/                # driver_session_summary, team_event_summary
+├── ai/
+│   └── rag_api/                 # FastAPI + Ollama SQL copilot
 ├── dashboard/
 │   ├── app.py                   # Streamlit explorer
 │   └── requirements.txt
@@ -41,7 +44,7 @@ f1-lakehouse/
     ├── ingestion/               # Poetry-enabled Fast-F1 image
     ├── dbt/                     # dbt-duckdb image
     ├── dashboard/               # Streamlit image
-    └── ai/, dashboard/, dbt/, ingestion/ stubs for future services
+    └── ai/                      # AI copilot image
 ```
 
 ## External SSD Storage
@@ -49,10 +52,10 @@ All persistent data lives on `/Volumes/SAMSUNG/f1-lakehouse-data` (mounted into 
 
 ```bash
 cp .env.example .env          # define EXTERNAL_DATA_ROOT + container paths
-bash scripts/init_external.sh # creates bronze/silver/gold/cache/warehouse
+bash scripts/init_external.sh # creates bronze/silver/gold/cache/warehouse/ollama
 ```
 
-The script verifies write access by touching `/opt/data/cache` before continuing.
+The script verifies write access by touching `/opt/data/cache` before continuing and ensures an `ollama/` directory exists for local model weights.
 
 ## Working with the Data Lake
 
@@ -86,6 +89,21 @@ Visit `http://localhost:8501` to:
 - Monitor lap counts, driver counts, and team coverage.
 - Inspect top 50 fastest laps with formatted timing strings.
 - Review team-level summaries for qualifying/sprint/race sessions.
+- Use the **AI Copilot** panel to ask natural-language questions; the backend converts them into safe DuckDB SQL and suggests a chart.
+
+### 4. AI Copilot (Ollama + FastAPI)
+```bash
+# optionally, pull the model once (inside the ollama container)
+docker compose up -d ollama
+docker compose exec ollama ollama pull llama3.2:3b
+
+# build + run the copilot API
+docker compose build ai
+docker compose up ai
+```
+- The `ollama` service stores its model cache under `${EXTERNAL_DATA_ROOT}/ollama`.
+- The `ai` service connects to DuckDB in read-only mode, calls Ollama (`OLLAMA_HOST`, `OLLAMA_MODEL`), validates the generated SQL, enforces LIMITs, and returns rows plus a chart suggestion.
+- The Streamlit dashboard calls `AI_SERVICE_URL` to display answers, the generated SQL, and a plotly visualization when applicable.
 
 ## Verification & Quality
 - `scripts/check_gold.sh` runs `dbt deps && dbt build`, prints row counts for silver/gold tables, and samples the five latest best laps directly from `/opt/data/warehouse/f1.duckdb`.
@@ -94,12 +112,13 @@ Visit `http://localhost:8501` to:
   - `make verify-gold` – execute the verification script (dbt build + DuckDB checks).
 
 ## Service Inventory
-| Service      | Image Source            | Responsibilities                                     |
-|--------------|------------------------|------------------------------------------------------|
-| `ingestion`  | `docker/ingestion`     | Run Fast-F1 ingestion via Poetry (`poetry run ...`). |
-| `dbt`        | `docker/dbt`           | Transform bronze → silver/gold inside DuckDB.       |
-| `dashboard`  | `docker/dashboard`     | Streamlit UI backed by DuckDB warehouse.            |
-| `ai`         | `docker/ai`            | Placeholder for future RAG/LLM services.            |
+| Service      | Image Source            | Responsibilities                                                        |
+|--------------|------------------------|-------------------------------------------------------------------------|
+| `ingestion`  | `docker/ingestion`     | Fast-F1 → Parquet bronze ingestion (Poetry, Fast-F1 cache on SSD).      |
+| `dbt`        | `docker/dbt`           | Transform bronze → silver/gold inside DuckDB.                           |
+| `dashboard`  | `docker/dashboard`     | Streamlit UI + AI Copilot front-end.                                   |
+| `ai`         | `docker/ai`            | FastAPI service calling Ollama to translate NL → safe DuckDB SQL.      |
+| `ollama`     | `ollama/ollama`        | Hosts local models with cache bound to `${EXTERNAL_DATA_ROOT}/ollama`. |
 
 Every service mounts:
 ```
@@ -108,9 +127,9 @@ Every service mounts:
 ```
 
 ## Next Steps
-- Expand the `ai/` RAG API to query gold marts.
-- Add automated scheduling (e.g., GitHub Actions + runners with access to the SSD).
-- Enrich dbt tests/metrics (exposures, freshness, data contracts).
+- Automate ingestion/dbt schedules (GitHub Actions runner mounted to the SSD).
+- Add more dbt tests/metrics (freshness, exposures, contracts).
+- Expand the AI surface area (e.g., incorporate weather joins, telemetry plotting).
 
 ---  
 Questions or ideas? Open an issue or start a discussion—this repo is ready for collaborative Fast-F1 analytics.  
