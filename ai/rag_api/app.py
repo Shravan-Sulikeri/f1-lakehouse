@@ -97,8 +97,18 @@ def build_prompt(question: str, schema_doc: str, request: AskRequest, silver_sch
   if request.session_code:
     filters.append(f"Session hint: {request.session_code}")
   filter_block = ("Hints:\n" + "\n".join(filters)) if filters else "Hints: none provided."
+  table_guidance = f"""
+Important modeling guidance:
+- Use {gold_schema}.driver_session_summary for driver-level metrics (driver, team, best_lap_time, laps_total, personal_best_laps).
+- Use {gold_schema}.team_event_summary for team-level metrics (team_laps_on_track, team_pitstops, team_best_lap_time).
+- Use {silver_schema}.laps for raw lap telemetry (lap_time, lapnumber, driver, driver_number, team, pit_in_time, pit_out_time, sector1time..3time).
+Do NOT reference columns that are not listed in the schema dump below.
+Always prefer the gold tables when best_lap_time or aggregated insights are requested.
+"""
   prompt = f"""
 {OPENAI_STYLE_SYSTEM_PROMPT}
+
+{table_guidance}
 
 Schemas:
 {schema_doc}
@@ -171,6 +181,8 @@ def execute_sql(sql: str) -> pd.DataFrame:
   con = duckdb.connect(WAREHOUSE, read_only=True)
   try:
     return con.execute(sql).df()
+  except duckdb.Error as exc:  # DuckDB binder/execution errors
+    raise HTTPException(status_code=400, detail=f"DuckDB failed to execute the AI-generated SQL: {exc}") from exc
   finally:
     con.close()
 

@@ -31,6 +31,8 @@ services:
       dockerfile: docker/dashboard/Dockerfile
     container_name: f1_dashboard
     env_file: .env
+    environment:
+      DUCKDB_DISABLE_FILE_SYSTEM_LOCKING: "1"
     depends_on:
       - ai
     ports: ["8501:8501"]
@@ -54,6 +56,8 @@ services:
       dockerfile: docker/ai/Dockerfile
     container_name: f1_ai
     env_file: .env
+    environment:
+      DUCKDB_DISABLE_FILE_SYSTEM_LOCKING: "1"
     depends_on:
       - ollama
     ports: ["8000:8000"]
