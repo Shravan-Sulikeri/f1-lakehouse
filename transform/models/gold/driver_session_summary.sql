@@ -1,5 +1,7 @@
 WITH laps AS (
-  SELECT * FROM {{ ref('laps') }} WHERE laptime IS NOT NULL
+  SELECT * FROM {{ ref(  
+  dbt run --select driver_session_summary
+  ) }} WHERE laptime IS NOT NULL
 ),
 driver_base AS (
   SELECT
